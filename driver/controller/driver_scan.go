@@ -80,11 +80,20 @@ operation:
 }
 
 func (n *NetConn) Chat() {
-	var contents string
 	for {
 		fmt.Println("---------------聊天界面------------")
-		fmt.Println("请输入聊天信息:")
-		fmt.Scanf("%s", &contents)
-		n.ChatPassenger(contents)
+		fmt.Println("\t 1  聊天")
+		fmt.Println("\t 2 订单结束")
+		fmt.Println("\t 请选择(1-2):")
+		fmt.Scanf("%s", &Key)
+		switch Key {
+		case "1":
+			n.ChatPassenger()
+		case "2": //
+			//订单结束
+		default:
+			fmt.Println("没有该选项")
+			break
+		}
 	}
 }

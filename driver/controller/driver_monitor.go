@@ -46,7 +46,9 @@ func (n *NetConn) ServiceMonitor() {
 			//用户发送聊天信息
 			fmt.Println("乘客跟你说:",mess.Data)
 			fmt.Println("---------------聊天界面------------")
-			fmt.Println("请输入聊天信息:")
+			fmt.Println("\t 1  聊天")
+			fmt.Println("\t 2 订单结束")
+			fmt.Println("\t 请选择(1-2):")
 			break
 		default:
 			break
